@@ -1,5 +1,6 @@
-let playerScore = 0
-let computerScore = 0
+  let playerScore = 0
+  let computerScore = 0
+  let result;
 
 function getComputerChoice() {
   const randomNumber = Math.floor((Math.random() * 3) + 1);
@@ -14,28 +15,37 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  playerSelection = prompt('What will you choose, Rock, Paper or Scissors?').toLowerCase();
+  playerSelection = prompt('What will you choose, Rock, Paper or Scissors?');
   computerSelection = getComputerChoice();
 
   if (playerSelection === '' || playerSelection === null){
-    return 'Please make a selection'
-  }else if(playerSelection === computerSelection){
-    return `It's a tie! You both picked ${playerSelection}`
-  } else if (playerSelection === 'rock' && computerSelection === 'scissors'){
+    result = 'Please make a selection' 
+  }else if(playerSelection.toLowerCase() === computerSelection){
+    result = `It's a tie! You both picked ${playerSelection}`
+  } else if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissors'){
     playerScore++
-    return 'You win! Rock crushes scissors';
-  } else if (playerSelection === 'paper' && computerSelection === 'rock'){
+    result = 'You win! Rock crushes scissors';
+  } else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock'){
     playerScore++
-    return 'You win! Paper covers rock';
-  } else if (playerSelection === 'scissors' && computerSelection === 'paper'){
+    result = 'You win! Paper covers rock';
+  } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'paper'){
     playerScore++
-    return 'You win! Scissors cuts paper';
+    result = 'You win! Scissors cuts paper';
   } else {
     computerScore++
-    return `You lost, ${computerSelection} beats ${playerSelection}`;
+    result = `You lost, ${computerSelection} beats ${playerSelection}`;
   }
 
+  console.log(`${result}, \n Player: ${playerScore} | Computer ${computerScore}`);
 }
 
-// “best of 5” While counter is smaller than 5 increment the counter by one
-// Print the value of the counter variable
+function game(){
+
+
+  for (let i = 0; i < 5; i++){
+    playRound();
+  }
+  console.log (`Player: ${playerScore} | Computer ${computerScore}`);
+}
+
+game();

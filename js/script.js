@@ -1,6 +1,7 @@
   let playerScore = 0
   let computerScore = 0
   let result;
+  let winnerIs;
 
 function getComputerChoice() {
   const randomNumber = Math.floor((Math.random() * 3) + 1);
@@ -35,9 +36,20 @@ function playRound(playerSelection, computerSelection) {
     computerScore++
     result = `You lost, ${computerSelection} beats ${playerSelection}`;
   }
-
-  console.log(`${result}, \n Player: ${playerScore} | Computer ${computerScore}`);
 }
+
+function declareWinner(){
+  if (playerScore === 0 && computerScore === 0){
+    winnerIs = 'I guess you didn\'t want to play with me.';
+  } else if (playerScore > computerScore){
+    winnerIs = 'You win!';
+  } else if (computerScore > playerScore){
+    winnerIs = 'You lose. Would you like a rematch?';
+  }else{
+    winnerIs = 'It\'s a Draw. Let\'s play again!';
+  }
+}
+
 
 function game(){
 

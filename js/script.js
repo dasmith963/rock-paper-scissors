@@ -1,7 +1,7 @@
-  let playerScore = 0
-  let computerScore = 0
-  let result;
-  let winnerIs;
+let playerScore = 0
+let computerScore = 0
+let result;
+let winnerIs;
 
 function getComputerChoice() {
   const randomNumber = Math.floor((Math.random() * 3) + 1);
@@ -50,14 +50,14 @@ function declareWinner(){
   }
 }
 
-
 function game(){
-
-
-  for (let i = 0; i < 5; i++){
+  for (let i = 0; i < 5; i++) {
     playRound();
+    console.log(`${result}, \n Your Score: ${playerScore} | Computer ${computerScore}`);
   }
-  console.log (`Player: ${playerScore} | Computer ${computerScore}`);
+
+  declareWinner();
+  console.log(winnerIs);
 }
 
 game();

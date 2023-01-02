@@ -50,14 +50,14 @@ function declareWinner(){
   }
 }
 
-function game(){
-  for (let i = 0; i < 5; i++) {
-    playRound();
-    console.log(`${result}, \n Your Score: ${playerScore} | Computer ${computerScore}`);
-  }
+// function game(){
+//   for (let i = 0; i < 5; i++) {
+//     playRound();
+//     console.log(`${result}, \n Your Score: ${playerScore} | Computer ${computerScore}`);
+//   }
 
-  declareWinner();
-  console.log(winnerIs);
-}
+//   declareWinner();
+//   console.log(winnerIs);
+// }
 
-game();
+// game();

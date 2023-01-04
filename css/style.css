@@ -17,6 +17,10 @@ body{
   min-height: 100vh;
 }
 
+.fa-question{
+  color: #222831;
+}
+
 .header{
   font-style: italic;
   background-color: #222831;
@@ -54,3 +58,30 @@ body{
   font-size: 27px;
 }
 
+.card{
+  background-color: #222831;
+  height: 28vw;
+  width: 22vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 #A0A0A0;
+  transition: 0.3s;
+  flex-shrink: 0;
+  margin: 8px auto;
+}
+
+.card:hover{
+  box-shadow: 0 8px 16px 0 #A0A0A0;
+}
+
+.card-content{
+  height: 20vw;
+  width: 19vw;
+  margin: 2.5vw;
+  background-color: #FCF6F5FF;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+}

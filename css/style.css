@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap');
 
+
 *{
   margin: 0;
   padding: 0;
@@ -15,10 +16,6 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-.fa-question{
-  color: #222831;
 }
 
 .header{
@@ -50,6 +47,7 @@ body{
   justify-content: space-around;
   align-items: center;
   padding: 0 60px;
+  gap: 16px;
 }
 
 .title{
@@ -84,4 +82,16 @@ body{
   display: flex;  
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
+}
+
+.player-img,
+.computer-img{
+  font-size: 4vw;
+  color: #222831;
+}
+
+.choice-text{
+  font-size: 2.5vw;
+  font-style: italic;
 }

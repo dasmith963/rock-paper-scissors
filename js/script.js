@@ -1,5 +1,8 @@
 let playerScore = 0;
 let computerScore = 0;
+const choiceBtns = document.querySelectorAll('.player-choice');
+
+choiceBtns.forEach(button => addEventListener('click', playRound));
 
 function getComputerChoice() {
   const choices = ['rock', 'paper', 'scissors'];
@@ -28,6 +31,7 @@ function playRound(playerSelection, computerSelection) {
     computerScore++
     result = `You lost, ${computerSelection} beats ${playerSelection}`;
   }
+  console.log(`${result}, \n Your Score: ${playerScore} | Computer ${computerScore}`);
 }
 
 function declareWinner(){
@@ -41,29 +45,3 @@ function declareWinner(){
     winnerIs = 'It\'s a Draw. Let\'s play again!';
   }
 }
-
-// function game(){
-//   for (let i = 0; i < 5; i++) {
-//     playRound();
-//     console.log(`${result}, \n Your Score: ${playerScore} | Computer ${computerScore}`);
-//   }
-
-//   declareWinner();
-//   console.log(winnerIs);
-// }
-
-// game();
-
-
-getComputerChoice()
-getComputerChoice()
-getComputerChoice()
-getComputerChoice()
-getComputerChoice()
-getComputerChoice()
-getComputerChoice()
-getComputerChoice()
-getComputerChoice()
-getComputerChoice()
-getComputerChoice()
-getComputerChoice()

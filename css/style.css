@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap');
 
-
 *{
   margin: 0;
   padding: 0;
@@ -98,9 +97,12 @@ body{
 
 .new-game{
   background-color: #222831;
-  border: none;
+  padding: 0.9375em 2em;
+  border: 0.1em solid #222831;
+  margin: 0 0.3em;
+  border-radius: 0.12em;
+  font-weight: 300;
   color: #F9FAF8;
-  padding: 15px 32px;
   font-size: 1rem;
 }
 
@@ -109,16 +111,19 @@ body{
 }
 
 .round-result{
-  margin: 16px;
+  margin: 12px;
   font-size: 1.4rem;
 }
 
 .player-choice{
   background-color: #222831;
-  padding: 10px 32px;
+  padding: 0.625em 2em;
+  border: 0.1em solid #222831;
+  margin: 0 0.3em;
+  border-radius: 0.12em;
+  font-weight: 300;
   color: #F9FAF8;
-  border: none;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .player-choice:hover{

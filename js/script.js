@@ -1,5 +1,8 @@
 let playerScore = 0;
 let computerScore = 0;
+const playerScoreBoard = document.querySelector('.player-score');
+const computerScoreBoard = document.querySelector('.computer-score');
+const roundResult = document.querySelector('.round-result');
 const choiceButtons = document.querySelectorAll('.player-choice');
 
 choiceButtons.forEach(button => button.addEventListener('click', playRound));
@@ -10,28 +13,36 @@ function getComputerChoice() {
   return choices[randomNumber];
 }
 
-function playRound(e) {
-  playerSelection = e.target.id
-  computerSelection = getComputerChoice();
-
-  if (playerSelection === '' || playerSelection === null){
-    result = 'Please make a selection' 
-  }else if(playerSelection.toLowerCase() === computerSelection){
-    result = `It's a tie! You both picked ${playerSelection}`
-  } else if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissors'){
-    playerScore++
-    result = 'You win! Rock crushes scissors';
-  } else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock'){
-    playerScore++
-    result = 'You win! Paper covers rock';
-  } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'paper'){
-    playerScore++
-    result = 'You win! Scissors cuts paper';
-  } else {
-    computerScore++
-    result = `You lost, ${computerSelection} beats ${playerSelection}`;
+function checkWinner(playerSelection, computerSelection) {
+  if (playerSelection === computerSelection) {
+    roundResult.textContent = `It's a tie! You both picked ${playerSelection}`;
+  } else if (playerSelection === 'rock'){
+    if (computerSelection === 'scissors') {
+      roundResult.textContent = 'You win! Rock crushes scissors';
+      return 'player';
+    } 
+  } else if (playerSelection ==='paper'){
+    if (computerSelection === 'rock'){
+      roundResult.textContent = 'You win! Paper covers rock';
+      return 'player';
+    }
+  } else if (playerSelection === 'scissors'){
+    if (computerSelection === 'paper'){
+      roundResult.textContent = 'You win! Scissors cuts paper';
+      return 'player';
+    }
+  } else{
+    roundResult.textContent = `You lost, ${computerSelection} beats ${playerSelection}`;
+    return 'computer';
   }
-  console.log(`${result}, \n Your Score: ${playerScore} | Computer ${computerScore}`);
+}
+
+function playRound(ev) {
+  playerSelection = ev.target.id;
+  computerSelection = getComputerChoice();
+  
+  
+
 }
 
 function declareWinner(){

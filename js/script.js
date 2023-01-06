@@ -1,8 +1,8 @@
 let playerScore = 0;
 let computerScore = 0;
-const choiceBtns = document.querySelectorAll('.player-choice');
+const choiceButtons = document.querySelectorAll('.player-choice');
 
-choiceBtns.forEach(button => addEventListener('click', playRound));
+choiceButtons.forEach(button => button.addEventListener('click', playRound));
 
 function getComputerChoice() {
   const choices = ['rock', 'paper', 'scissors'];

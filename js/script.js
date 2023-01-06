@@ -10,8 +10,8 @@ function getComputerChoice() {
   return choices[randomNumber];
 }
 
-function playRound(playerSelection, computerSelection) {
-  playerSelection = prompt('What will you choose, Rock, Paper or Scissors?');
+function playRound(e) {
+  playerSelection = e.target.id
   computerSelection = getComputerChoice();
 
   if (playerSelection === '' || playerSelection === null){

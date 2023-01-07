@@ -3,9 +3,21 @@ let computerScore = 0;
 const playerScoreBoard = document.querySelector('.player-score');
 const computerScoreBoard = document.querySelector('.computer-score');
 const roundResult = document.querySelector('.round-result');
+const finalResult = document.querySelector('.final-result');
+const newGame = document.querySelector('.new-game')
 const choiceButtons = document.querySelectorAll('.player-choice');
 
 choiceButtons.forEach(button => button.addEventListener('click', playRound));
+
+newGame.addEventListener('click', () =>{
+  playerScore = 0;
+  computerScore = 0;
+  choiceButtons.forEach(button => button.disabled = false);
+  playerScoreBoard.textContent = playerScore;
+  computerScoreBoard.textContent = computerScore;
+  roundResult.textContent = 'Please Make A Selection'
+  finalResult.textContent = 'Let\'s play a game, first to score 5 points wins!'
+})
 
 function getComputerChoice() {
   const choices = ['rock', 'paper', 'scissors'];
@@ -42,10 +54,12 @@ function updateScore(winner) {
 
 function declareWinner() {
   if (playerScore === 5) {
+    finalResult.textContent = 'Congratulations!! You win!';
     choiceButtons.forEach(button => button.disabled = true);
   }
   
   if (computerScore === 5){
+    finalResult.textContent = 'You lose. Would you like a rematch?';
     choiceButtons.forEach(button => button.disabled = true);
   }
 }

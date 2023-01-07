@@ -40,23 +40,21 @@ function updateScore(winner) {
   if (winner === 'computer') computerScoreBoard.textContent = ++computerScore;
 }
 
+function declareWinner() {
+  if (playerScore === 5) {
+    choiceButtons.forEach(button => button.disabled = true);
+  }
+  
+  if (computerScore === 5){
+    choiceButtons.forEach(button => button.disabled = true);
+  }
+}
+
 function playRound(ev) {
   playerSelection = ev.target.id;
   computerSelection = getComputerChoice();
-  console.log(playerSelection);
-  console.log(computerSelection);
   winner = checkWinner(playerSelection, computerSelection);
-  updateScore(winner)
+  updateScore(winner);
+  declareWinner();
 }
 
-function declareWinner() {
-  if (playerScore === 0 && computerScore === 0) {
-    winnerIs = 'I guess you didn\'t want to play with me.';
-  } else if (playerScore > computerScore) {
-    winnerIs = 'You win!';
-  } else if (computerScore > playerScore) {
-    winnerIs = 'You lose. Would you like a rematch?';
-  } else {
-    winnerIs = 'It\'s a Draw. Let\'s play again!';
-  }
-}

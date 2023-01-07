@@ -16,34 +16,23 @@ function getComputerChoice() {
 function checkWinner(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     roundResult.textContent = `It's a tie! You both picked ${playerSelection}`;
+  } 
+  else if (playerSelection === 'rock' && computerSelection === 'scissors'){
+    roundResult.textContent = 'You win! Rock crushes scissors';
+    return 'player';
   }
-  else if (playerSelection === 'rock') {
-    if (computerSelection === 'scissors') {
-      roundResult.textContent = 'You win! Rock crushes scissors';
-      return 'player';
-    } else if (computerSelection === 'paper') {
+  else if (playerSelection === 'paper' && computerSelection === 'rock'){
+    roundResult.textContent = 'You win! Paper covers rock';
+    return 'player';
+  }
+   else if (playerSelection === 'scissors' && computerSelection === 'paper'){
+    roundResult.textContent = 'You win! Scissors cuts paper';
+    return 'player';
+   }
+  else {
       roundResult.textContent = `You lost, ${computerSelection} beats ${playerSelection}`;
       return 'computer';
     }
-  }
-  else if (playerSelection === 'paper') {
-    if (computerSelection === 'rock') {
-      roundResult.textContent = 'You win! Paper covers rock';
-      return 'player';
-    } else if (computerSelection === 'scissors') {
-      roundResult.textContent = `You lost, ${computerSelection} beats ${playerSelection}`;
-      return 'computer';
-    }
-  }
-  else if (playerSelection === 'scissors') {
-    if (computerSelection === 'paper') {
-      roundResult.textContent = 'You win! Scissors cuts paper';
-      return 'player';
-    } else if (computerSelection === 'rock') {
-      roundResult.textContent = `You lost, ${computerSelection} beats ${playerSelection}`;
-      return 'computer';
-    }
-  }
 }
 
 function updateScore(winner) {

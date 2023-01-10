@@ -12,8 +12,6 @@ body{
   background-color: #393E46;
   color: #F9FAF8;
   text-align: center;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -61,7 +59,6 @@ body{
   width: 22vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
   box-shadow: 0 4px 8px 0 #A0A0A0;
   transition: 0.3s;

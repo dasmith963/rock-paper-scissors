@@ -1,68 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/d861830676.js" crossorigin="anonymous"></script>
-  <script src="./js/script.js" defer></script>
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Rock Paper Scissors</title>
-</head>
-
-<body>
-  <div class="container">
-    <header class="header">
-      <h1 class="heading">Rock Paper Scissors</h1>
-    </header>
-    <section class="subheading">
-      <h2 class="final-result">Let's play a game, first to score 5 points wins!</h2>
-      <div class="scoreboard">
-        <span class="player-score">0</span> : <span class="computer-score">0</span>
-      </div>
-    </section>
-    <section class="main">
-      <div class="player-card">
-        <h3 class="title">Player</h3>
-        <div class="card">
-          <div class="card-content">
-            <div class="player-icon">
-              <i class="fa-solid fa-question fa-bounce fa-2xl"></i>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d861830676.js" crossorigin="anonymous"></script>
+    <script src="./js/script.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="heading">Rock Paper Scissors</h1>
+      </header>
+      <section class="subheading">
+        <h2 class="final-result">Let's play a game, first to score 5 points wins!</h2>
+        <div class="scoreboard">
+          <span class="player-score">0</span> : <span class="computer-score">0</span>
+        </div>
+      </section>
+      <section class="main">
+        <div class="player-card">
+          <h3 class="title">Player</h3>
+          <div class="card">
+            <div class="card-content">
+              <div class="player-icon">
+                <i class="fa-solid fa-question fa-bounce fa-2xl"></i>
+              </div>
+            </div>
+            <div class="card-text">
+              <p class="player-choice-text"></p>
             </div>
           </div>
-          <div class="card-text">
-            <p class="player-choice-text"></p>
-          </div>
         </div>
-      </div>
-      <div class="btn-wrapper">
-      <h2 class="round-result">Please Make A Selection</h2>
-      <button class="new-game">New Game</button>
-      </div>
-      <div class="computer-card">
-        <h3 class="title">Computer</h3>
-        <div class="card">
-          <div class="card-content">
-            <div class="computer-icon">
-              <i class="fa-solid fa-question fa-bounce fa-2xl"></i>
+        <div class="btn-wrapper">
+          <h2 class="round-result"></h2>
+          <p class="match-choices"></p>
+          <button class="new-game">New Game</button>
+        </div>
+        <div class="computer-card">
+          <h3 class="title">Computer</h3>
+          <div class="card">
+            <div class="card-content">
+              <div class="computer-icon">
+                <i class="fa-solid fa-question fa-bounce fa-2xl"></i>
+              </div>
+            </div>
+            <div class="card-text">
+              <p class="computer-choice-text"></p>
             </div>
           </div>
-          <div class="card-text">
-            <p class="computer-choice-text"></p>
-          </div>
         </div>
-      </div>
-    </section>
-    <section class="controls">
-      <!-- <h2 class="round-result">Please Make A Selection</h2> -->
-      <div class="selections">
-        <button id="rock" class="player-choice">Rock</button>
-        <button id="paper" class="player-choice">Paper</button>
-        <button id="scissors" class="player-choice">Scissors</button>
-      </div>
-    </section>
-  </div>
-</body>
-
+      </section>
+      <section class="controls">
+        <div class="selections">
+          <button id="rock" class="player-choice">Rock</button>
+          <button id="paper" class="player-choice">Paper</button>
+          <button id="scissors" class="player-choice">Scissors</button>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>

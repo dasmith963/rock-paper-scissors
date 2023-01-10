@@ -19,15 +19,18 @@ body{
   font-style: italic;
   background-color: #222831;
   padding: 16px;
-  font-size: 30px;
+  font-size: 1.875em;
 }
 
 .final-result{
   margin: 16px 0 5px;
 }
 
-.round-result{
-  font-size: 20px;
+.round-result,
+.match-choices{
+  font-size: 1.56em;
+  width: 18vw;
+  margin: 5px;
 }
 
 .scoreboard{
@@ -50,7 +53,7 @@ body{
 .title{
   font-style: italic;
   margin-bottom: 16px;
-  font-size: 27px;
+  font-size: 2em;
 }
 
 .card{
@@ -89,15 +92,13 @@ body{
 
 .player-choice-text,
 .computer-choice-text{
-  font-size: 2.5vw;
+  font-size: 2.3vw;
   font-style: italic;
 }
 
 .new-game{
   background-color: #222831;
   padding: 0.9375em 2em;
-  border: 0.1em solid #222831;
-  margin: 0 0.3em;
   border-radius: 0.12em;
   font-weight: 300;
   color: #F9FAF8;
@@ -108,19 +109,15 @@ body{
   box-shadow: 0 12px 16px 0 #0000003d;
 }
 
-.round-result{
-  margin: 12px;
-  font-size: 1.4rem;
-}
-
 .player-choice{
   background-color: #222831;
   padding: 0.625em 2em;
   border: 0.1em solid #222831;
   margin: 0 0.3em;
-  border-radius: 0.12em;
   font-weight: 300;
   color: #F9FAF8;
+  font-size: 1rem;
+  margin-top: 12px;
   font-size: 1rem;
 }
 

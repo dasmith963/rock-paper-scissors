@@ -4,7 +4,7 @@ This is a revision of my rock, paper, scissors project. The previous version of 
  
 ## Overview
 
-As a continuation of my journey through the Odin Project Foundations curriculum I have been tasked with adding a graphical user interface to my previous iteration of rock, paper, scissors. The JavaScript portion of this project remained largely unchanged, but I did make a few changes as listed below.  
+As a continuation of my journey through the Odin Project Foundations curriculum I have been tasked with adding a graphical user interface to my previous iteration of rock, paper, scissors. The JavaScript portion of this project remains largely unchanged, but I did make a few changes as listed below.  
 
 Users should now be able to:
 

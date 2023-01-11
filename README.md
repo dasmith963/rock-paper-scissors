@@ -44,5 +44,4 @@ My goals going forward:
 
 ### Links
 
-- GitHub Repo: 
-
+- live preview: https://dasmith963.github.io/rock-paper-scissors/

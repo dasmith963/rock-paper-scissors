@@ -14,14 +14,14 @@ const choiceButtons = document.querySelectorAll('.player-choice');
 
 choiceButtons.forEach(button => button.addEventListener('click', playRound));
 
+function capitalizeFirstLetter (string){
+  return string.toUpperCase().charAt(0) + string.substring(1).toLowerCase();
+}
+
 function getComputerChoice() {
   const choices = ['rock', 'paper', 'scissors'];
   const randomNumber = Math.floor(Math.random() * 3);
   return choices[randomNumber];
-}
-
-function capitalizeFirstLetter (string) {
-  return string.toUpperCase().charAt(0) + string.substring(1).toLowerCase();
 }
 
 function checkWinner(playerSelection, computerSelection) {

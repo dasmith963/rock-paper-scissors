@@ -1,14 +1,6 @@
 # Rock Paper Scissors
 
 This is a revision of my rock, paper, scissors project. The previous version of the program was only accessible through the  browser’s console tab, but I am happy to share that it now has a graphical user interface!
-
-## Table of contents
-
-- [Overview](#overview)
-  - [Screenshot](#screenshot)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Links](#links)
  
 ## Overview
 

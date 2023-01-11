@@ -1,6 +1,6 @@
 # Rock Paper Scissors
 
-This is a revision of my rock, paper, scissors project. The previous version of the program was only accessible through the  browser’s console tab, but I am happy to share that it now has a graphical user interface!
+This is a revision of my rock, paper, scissors project. The previous version of this project was only accessible from the browser’s console tab, but I am happy to share that it now has a graphical user interface!
  
 ## Overview
 
@@ -31,7 +31,7 @@ function getComputerChoice() {
 }
 
 ```
-I also learn how to manipulate the DOM, using query selectors. With this tool I was able to select and modify elements by adding event listeners and changing text whenever a particular button was pressed.
+I also learned how to manipulate the DOM, using query selectors. With this tool I was able to select and modify elements by adding event listeners and changing text whenever a particular button was pressed.
  
 ### Continued development
 

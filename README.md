@@ -8,7 +8,7 @@ As a continuation of my journey through the Odin Project Foundations curriculum 
 
 Users should now be able to:
 
-- Play a match until either the player or the computer reaches 5 points
+- Play a match until either the player or computer reaches 5 points
 - Use buttons to select rock, paper or scissors
 - See corresponding icons & text for player and computer selections 
 - View the results of the current round and track the current leader with the up-to-date scoreboard
